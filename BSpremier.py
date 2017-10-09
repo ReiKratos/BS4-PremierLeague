@@ -1,9 +1,7 @@
 import urllib.request
 from bs4 import BeautifulSoup
-import re
 
-
-#finding teams tag by attr 'data-filtered-table-row-name' 
+#finding teams tag by attribute 'data-filtered-table-row-name'
 def has_row_name(tag):
 	return tag.has_attr('class') and tag.has_attr('data-filtered-table-row-name')
 
@@ -19,8 +17,8 @@ print('\n\n{:>25} {:>25} {:>25}'.format('TEAM', 'RANK', 'POINTS'))
 #each iteration is a team tag
 for i in range((len(table))):
 	team_name = table[i]["data-filtered-table-row-name"]
-	
+
 	for td in table[i].find('td', attrs={'class':'points'}):
-		team_info = [team_name, i+1, td] 
+		team_info = [team_name, i+1, td]
 		print('{:>25} {:>25} {:>25}'.format(*team_info))
 
