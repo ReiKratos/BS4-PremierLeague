@@ -4,4 +4,4 @@ There's not much to say about this project. It's just a simple and funny way to 
 
 # Getting started
 
-Just run it and get the classification ^^
+Just run it and get the classification's table of Premier League ^^
